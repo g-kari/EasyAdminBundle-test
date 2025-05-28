@@ -4,13 +4,15 @@ namespace App\Repository\Trait;
 
 /**
  * Provides common save and remove methods for repository classes.
+ *
+ * @template T of object
  */
 trait SaveRemoveTrait
 {
     /**
      * Save an entity to the database.
      *
-     * @param object $entity The entity to save
+     * @param T $entity The entity to save
      * @param bool $flush Whether to flush changes immediately
      */
     public function save(object $entity, bool $flush = false): void
